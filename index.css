@@ -17,30 +17,42 @@ body {
   background-color: var(--surface-0);
   border: 2px solid white;
   border-radius: 18px;
-  display: flex;
-  flex-direction: row;
+  box-sizing: border-box;
+  height: 80vh;
   left: 50%;
-  max-height: 75vh;
   overflow: hidden;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 60vw;
-  
+
   > #main-container {
-    height: 75vh;
-    width: 445px;
+    box-sizing: border-box;
+    width: 38%;
 
-    > header {
+    header {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      position: relative;
 
-      #banner {
+      > #profile-banner {
         aspect-ratio: 21 / 9;
         background-color: black;
         box-sizing: border-box;
         width: 100%;
+
+        & + #profile-icon {
+          top: calc(100% - 3rem);
+        }
+      }
+
+      > #profile-icon {
+        border: 7px solid var(--surface-0);
+        border-radius: 50%;
+        box-sizing: border-box;
+        height: 6rem;
+        left: 2em;
+        max-width: 100%;
+        position: absolute;
       }
     }
   }
