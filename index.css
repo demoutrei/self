@@ -1,9 +1,12 @@
 :root {
   --primary: #000;
+  --subtext-0: #a6adc8;
+  --subtext-1: #bac2de;
   --surface-0: #1d1d1d;
   --surface-1: #323232;
   --surface-2: #444444;
   --surface-3: #5b5b5b;
+  --text: #cdd6f4;
 }
 
 
@@ -27,12 +30,36 @@ body {
   width: 60vw;
 
   > #main-container {
+    border-right: 1px solid darkgray;
     box-sizing: border-box;
+    height: 100%;
     width: 38%;
 
     header {
       box-sizing: border-box;
       position: relative;
+
+      > #name-container {
+        box-sizing: border-box;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2em;
+        padding-top: 3rem;
+        position: relative;
+        width: 100%;
+
+        > #display-name {
+          font-family: Arial;
+          font-size: 1.7em;
+          font-weight: 800;
+        }
+
+        > #username {
+          font-family: sans-serif;
+          font-size: 1.1em;
+        }
+      }
 
       > #profile-banner {
         aspect-ratio: 21 / 9;
@@ -41,7 +68,7 @@ body {
         width: 100%;
 
         & + #profile-icon {
-          top: calc(100% - 3rem);
+          top: calc(((60vw * 0.38) * (9 / 21)) - 3rem);
         }
       }
 
