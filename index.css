@@ -10,6 +10,11 @@
 }
 
 
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: var(--primary);
   margin: 0;
@@ -80,6 +85,39 @@ body {
         left: 2em;
         max-width: 100%;
         position: absolute;
+      }
+    }
+
+    main {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+
+      > #bio-container {
+        display: flex;
+        flex-direction: column;
+
+        > #bio {
+          color: white;
+          font-family: arial;
+          font-size: 1em;
+          padding-top: 0.45em;
+        }
+      }
+      
+      > section {
+        background-color: var(--surface-1);
+        border-radius: 20px;
+        padding: 0.8em;
+        width: 90%;
+
+        > .title {
+          color: #666;
+          font-family: sans-serif;
+          font-weight: bold;
+        }
       }
     }
   }
