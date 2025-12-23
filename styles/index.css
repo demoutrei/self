@@ -1,0 +1,47 @@
+:root {
+  --primary: #000;
+  --surface-0: #1d1d1d;
+  --surface-1: #323232;
+  --surface-2: #444444;
+  --surface-3: #5b5b5b;
+}
+
+
+body {
+  background-color: var(--primary);
+  margin: 0;
+}
+
+
+#profile {
+  background-color: var(--surface-0);
+  border: 2px solid white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: row;
+  left: 50%;
+  max-height: 75vh;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  
+  > #main-container {
+    height: 75vh;
+    width: 445px;
+
+    > header {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+      #banner {
+        aspect-ratio: 21 / 9;
+        background-color: black;
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
+  }
+}
