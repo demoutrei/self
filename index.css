@@ -178,8 +178,14 @@ body {
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
 
-            &[type="github"] > .connection-icon {
-              background-image: url("assets/github.svg");
+            &[type="github"] {
+              > .connection-icon {
+                background-image: url("assets/github.svg");
+
+                .tooltip-content::before {
+                  content: "GitHub";
+                }
+              }
             }
 
             > .connection-name {
@@ -194,12 +200,32 @@ body {
             }
             
             > .connection-icon {
+              align-items: center;
               aspect-ratio: 1 / 1;
               background-position: center;
               background-size: cover;
               border-radius: 50%;
+              display: flex;
+              flex-direction: column;
               height: 2.5rem;
-              padding-left: 0.5em;
+              position: relative;
+
+              &:hover > .connection-icon-tooltip {
+                visibility: visible;
+              }
+              
+              > .connection-icon-tooltip {
+                background-color: var(--surface-0);
+                border: 2px solid white;
+                border-radius: 10px;
+                color: white;
+                font-family: sans-serif;
+                font-size: 0.9em;
+                padding: 0.25rem 0.5rem;
+                position: absolute;
+                top: calc(100% - 4.5rem);
+                visibility: hidden;
+              }
             }
           }
         }
