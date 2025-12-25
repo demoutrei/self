@@ -44,6 +44,61 @@ body {
       box-sizing: border-box;
       position: relative;
 
+      > #menu-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+
+        > #profile-menu {
+          aspect-ratio: 1 / 1;
+          background-color: var(--surface-1);
+          border-radius: 50%;
+          align-self: end;
+          width: 2rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:focus + #profile-menu-list {
+            visibility: visible;
+          }
+        }
+
+        > #profile-menu-list {
+          background-color: var(--surface-1);
+          border-radius: 13px;
+          color: white;
+          font-family: arial;
+          font-size: 0.9em;
+          list-style-type: none;
+          margin: 0;
+          overflow: hidden;
+          padding: 0;
+          visibility: hidden;
+
+          > li {
+            padding: 0.5em 1em;
+
+            &:first-child {
+              padding-top: 1em;
+            }
+
+            &:hover {
+              background-color: var(--surface-2);
+              cursor: pointer;
+            }
+
+            &:last-child {
+              padding-bottom: 1em;
+            }
+          }
+        }
+      }
+
       > #name-container {
         box-sizing: border-box;
         color: white;
