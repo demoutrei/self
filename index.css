@@ -21,12 +21,12 @@ body {
 }
 
 
-#profile {
+#profile-container {
   background-color: var(--surface-0);
   border: 2px solid white;
   border-radius: 18px;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-direction: row;
   height: 80vh;
   left: 50%;
@@ -35,6 +35,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 60vw;
+
+  &.show {
+    display: flex;
+  }
 
   > #main-container {
     border-right: 1px solid darkgray;
