@@ -18,6 +18,34 @@
 body {
   background-color: var(--primary);
   margin: 0;
+  overflow: clip;
+}
+
+
+#sidebar {
+  border: solid white;
+  border-top-left-radius: 13px;
+  border-width: 2px 1px 0 2px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 2rem);
+  left: 1.2rem;
+  overflow: clip;
+  position: absolute;
+  top: 2rem;
+  width: 310px;
+
+  > .server {
+    border-bottom: 1px solid white;
+    padding: 0.8em 0.7em;
+
+    > .name {
+      color: white;
+      font-family: sans-serif;
+      font-size: 1.1em;
+      font-weight: 560;
+    }
+  }
 }
 
 
