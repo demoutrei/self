@@ -12,12 +12,6 @@
         <span class="name">demo.repository</span>
       </div>
       <ul class="channel-list">
-        <ul class="channel category">
-          <div class="name">Works</div>
-          <li class="channel text">demo-discord</li>
-          <li class="channel text">discord-autobot</li>
-          <li class="channel text">discord-commands</li>
-        </ul>
       </ul>
     </header>
     <div id="profile-container">
@@ -84,4 +78,10 @@
       </div>
     </div>
   </body>
+  <script type="module" src="scripts/channels_manager.js"></script>
+  <script type="module">
+    import { channelsSetupHook } from './scripts/channels_manager.js';
+
+    await channelsSetupHook();
+  </script>
 </html>

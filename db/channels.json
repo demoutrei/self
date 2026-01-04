@@ -1,0 +1,38 @@
+[
+  {
+    "type": 0,
+    "name": "Home"
+  },
+  {
+    "type": 4,
+    "name": "Guides",
+    "children": [
+      {
+        "type": 0,
+        "name": "discord-py"
+      },
+      {
+        "type": 0,
+        "name": "python"
+      }
+    ]
+  },
+  {
+    "type": 4,
+    "name": "Works",
+    "children": [
+      {
+        "type": 0,
+        "name": "demo-discord"
+      },
+      {
+        "type": 0,
+        "name": "discord-autobot"
+      },
+      {
+        "type": 0,
+        "name": "discord-commands"
+      }
+    ]
+  }
+]
