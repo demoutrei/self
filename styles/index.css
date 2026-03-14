@@ -1,0 +1,11 @@
+@import 'base.css';
+
+
+#terminal-container {
+  height: calc(100vh - (0.5em + 10px));
+  width: calc(100vw - 10px);
+
+  &::before {
+    content: "Terminal";
+  }
+}
